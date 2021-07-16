@@ -2,52 +2,62 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Typescript + React　Docker
+### 1. mkdir 'your folder name'
+### 2. cd 'your folder name'
+### 3. docker-compose build
+### 4. docker-compose run --rm react-drag-and-drop sh -c 'npx create-react-app react-drag-and-drop --template typescript'
+### 5. docker-compose up
 
-Typescript + React　Docker
-### mkdir 'your folder name'
-### cd 'your folder name'
-### docker-compose build
-### docker-compose run --rm react-drag-and-drop sh -c 'npx create-react-app react-drag-and-drop --template typescript'
-### docker-compose up
+※ docker registry(Private)
 
-In the project directory, you can run:
+## Project script
+`yarn start`
+Runs the app in the your local development
 
-### `yarn start`
+## 目的
+ReactのDrag&Dropをサンプル実装する
+（今回はライブラリの導入）
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ライブラリ選定基準
+・マテリアルデザインは考慮しない
+・スマートフォンのタッチデバイスの利用は無し
+・ファイル取り込みのみで利用を想定
+・バイナリファイルのコンバート可能
+・ファイル名、サイズなどの情報が取得可能
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 選定リスト
+### react-dropzone
+howTo: `https://react-dropzone.js.org/`
+github: `https://github.com/react-dropzone/react-dropzone`
+pkg-m: `https://yarnpkg.com/package/react-dropzone`
+pkg-types: `https://yarnpkg.com/package/@types/react-dropzone`
+・React hooks：対応
+・カスタマイズ性：普通
+・Last Commit：1ヶ月前
+・API：普通
+・コスト：低め
 
-### `yarn test`
+### react-beautiful-dnd
+github: `https://github.com/atlassian/react-beautiful-dnd`
+pkg: `https://yarnpkg.com/package/react-beautiful-dnd`
+pkg-types: `https://yarnpkg.com/package/@types/react-beautiful-dnd`
+・Atlassian製
+・Last Commit：1ヶ月前
+・HTML5：未利用
+・カスタマイズ性：普通〜高い
+・API：多い
+・コスト：普通
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## react-dnd
+github: `https://github.com/react-dnd/react-dnd`
+pkg: `https://yarnpkg.com/package/react-dnd`
+pkg-types: `https://yarnpkg.com/package/@types/react-dnd`
+・Last Commit：1ヶ月前
+・HTML5：利用
+・API：普通〜多い
+・カスタマイズ性：普通〜高い
+・コスト：普通〜高い
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 選定・理由
+`react-dropzone`
