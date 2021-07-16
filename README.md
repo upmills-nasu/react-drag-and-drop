@@ -61,3 +61,8 @@ pkg-types: `https://yarnpkg.com/package/@types/react-dnd`
 
 ## 選定・理由
 `react-dropzone`
+
+ドキュメントが豊富でカスタマイズ性もそこそこ、フックも効くし、コストも低め
+要件が出揃ってない感あるのでまだ決定には微妙なところは否めない
+
+## 備忘録
