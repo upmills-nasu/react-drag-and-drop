@@ -3,8 +3,10 @@
 ### 1. mkdir 'your folder name'
 ### 2. clone 'git:react-drag-and-drop'
 ### 3. docker-compose build
-### 4. docker-compose run --rm react-drag-and-drop sh -c 'npx create-react-app react-drag-and-drop --template typescript'
-### 5. docker-compose up
+### 4. docker-compose run --rm react-drag-and-drop
+### 5. docker-compose up (-d) //detach
+(run attached: docker-compose logs --follow)
+### 6. docker-compose down
 
 ※ docker registry(Private)  
 
