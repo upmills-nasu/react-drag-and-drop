@@ -1,10 +1,7 @@
 # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Typescript + React　Docker
 ### 1. mkdir 'your folder name'
-### 2. cd 'your folder name'
+### 2. clone 'git:react-drag-and-drop'
 ### 3. docker-compose build
 ### 4. docker-compose run --rm react-drag-and-drop sh -c 'npx create-react-app react-drag-and-drop --template typescript'
 ### 5. docker-compose up
